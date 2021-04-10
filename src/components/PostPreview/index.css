@@ -1,0 +1,38 @@
+.postPreview {
+  flex: 0.33;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 2px 2px 2px rgb(0 0 255 / 20%);
+  border-radius: 5px;
+}
+
+.postPreview__content {
+  padding: 20px;
+}
+
+.postPreview__title {
+  text-transform: uppercase;
+  padding-bottom: 2%;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.postPreview__body {
+  font-size: 20px;
+}
+
+.postPreview__banner {
+  width: 100%;
+  background-color: whitesmoke;
+  height: 20%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.postPreview__banner img {
+  object-fit: contain;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}

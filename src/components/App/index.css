@@ -1,0 +1,29 @@
+.app {
+  background-color: whitesmoke;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app__header {
+  display: flex;
+  background-color: rgb(59, 61, 170);
+  height: 50px;
+  color: white;
+  padding: 15px;
+  align-items: center;
+}
+
+.app__logo {
+  margin-left: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.app__body {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 30px;
+}

@@ -1,0 +1,38 @@
+.posts {
+  flex: 0.65;
+  overflow-y: scroll;
+  height: 85vh;
+}
+
+.posts::-webkit-scrollbar {
+  display: none;
+}
+
+.posts {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.posts__post {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 50px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px rgb(0 0 255 / 20%);
+}
+
+.posts__title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.posts__body {
+  color: grey;
+  font-size: 20px;
+}
+
+.posts__post--loading {
+  cursor: default;
+}

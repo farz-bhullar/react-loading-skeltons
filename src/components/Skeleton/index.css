@@ -1,0 +1,27 @@
+.skeleton {
+  margin: 10px 0;
+  background-color: #dfcdcd;
+  overflow: hidden;
+}
+
+.skeleton__animation {
+  width: 50%;
+  height: 100%;
+  background-color: grey;
+  position: relative;
+  animation: loading 1s infinite;
+  overflow: hidden;
+  border-radius: 5%;
+  opacity: 0.1;
+  overflow: hidden;
+}
+
+@keyframes loading {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
