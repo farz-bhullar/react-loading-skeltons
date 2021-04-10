@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./index.css";
 import PostPreviewSkeleton from "../Skeleton/PostPreviewSkeleton";
 import CancelIcon from "@material-ui/icons/Cancel";
+import { IconButton } from "@material-ui/core";
 
 function PostPreview({ post, onCloseClick }) {
   const [loading, setLoading] = useState(true);
@@ -27,7 +28,9 @@ function PostPreview({ post, onCloseClick }) {
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <h4 className="postPreview__title">{post.title}</h4>
           <span className="postPreview__close" onClick={onCloseClick}>
-            <CancelIcon />
+            <IconButton>
+              <CancelIcon />
+            </IconButton>
           </span>
         </div>
         <div className="postPreview__banner">

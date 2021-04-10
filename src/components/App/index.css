@@ -15,6 +15,7 @@
   font-family: cursive;
   box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
     0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  justify-content: space-between;
 }
 
 .app__logo {
@@ -35,4 +36,16 @@
   margin-left: 50px;
   margin-right: 50px;
   padding-top: 10px;
+}
+
+.app__socialMedia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 50px;
+}
+
+.app__socialMedia .MuiSvgIcon-root {
+  color: white !important;
+  font-size: 30px !important;
 }

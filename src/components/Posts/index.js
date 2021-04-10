@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import PostSkeleton from "../Skeleton/PostSkeleton";
 import "./index.css";
 import { truncate } from "../../utils";
-function Posts({ onPostClick }) {
+function Posts({ onPostClick, previewPostId }) {
   const [posts, setPosts] = useState([]);
-  const [activePostId, setActivePostId] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,12 +24,9 @@ function Posts({ onPostClick }) {
         <div
           key={`post-key-${post.id}`}
           className={`posts__post ${
-            post.id === activePostId ? "posts_post--active" : ""
+            post.id === previewPostId && "posts_post--active"
           }`}
-          onClick={() => {
-            setActivePostId(post.id);
-            onPostClick(post);
-          }}
+          onClick={() => onPostClick(post)}
         >
           <h5 className="posts__title">{post.title}</h5>
           <p className="posts__body">{truncate(post.body, 95)}</p>
@@ -43,7 +39,10 @@ function Posts({ onPostClick }) {
       .fill()
       .map((_, index) => {
         return (
-          <div className="posts__post posts_post-loading" key={`ps-k-${index}`}>
+          <div
+            className="posts__post posts__post--loading"
+            key={`ps-k-${index}`}
+          >
             <PostSkeleton key={`post-skeleton-key-${index}`} />
           </div>
         );

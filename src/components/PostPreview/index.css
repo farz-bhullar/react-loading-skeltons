@@ -20,15 +20,8 @@
 }
 
 .postPreview__close {
-  font-weight: bold;
   margin-top: -25px;
   margin-right: -25px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.postPreview__close > .MuiSvgIcon-root:hover {
-  transform: scale(1.1);
 }
 
 .postPreview__body {
@@ -43,11 +36,17 @@
   margin-bottom: 15px;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
 }
 
 .postPreview__banner img {
   object-fit: contain;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 100%;
   height: auto;
+  transition: 0.1s ease-in;
+}
+
+.postPreview__banner img:hover {
+  transform: scale(1.02);
 }

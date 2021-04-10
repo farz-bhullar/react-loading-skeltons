@@ -2,7 +2,7 @@
   flex: 1;
   overflow-y: scroll;
   height: 85vh;
-  padding: 5px;
+  padding: 0 5px;
 }
 
 .posts::-webkit-scrollbar {
@@ -21,6 +21,10 @@
   padding: 35px;
   cursor: pointer;
   box-shadow: 2px 2px 2px rgb(0 0 255 / 20%);
+}
+
+.posts__post:hover {
+  background-color: #eee7e757;
 }
 
 .posts_post--active {

@@ -6,7 +6,7 @@ function PostPreviewSkeleton() {
   return (
     <div className="skeletonWrapper">
       <Skeleton width="50%" height="25px" />
-      <Skeleton width="100%" height="200px" marginTop="25px" />
+      <Skeleton width="100%" height="180px" marginTop="25px" />
       {Array(8)
         .fill()
         .map((_, index) => (
