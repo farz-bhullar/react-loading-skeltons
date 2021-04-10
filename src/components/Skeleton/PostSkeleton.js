@@ -7,8 +7,6 @@ function PostSkeleton() {
     <div className="skeletonWrapper">
       <Skeleton width="50%" height="20px" />
       <Skeleton height="15px" />
-      <Skeleton height="15px" />
-      <Skeleton height="15px" />
     </div>
   );
 }

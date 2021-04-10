@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
 import PostPreviewSkeleton from "../Skeleton/PostPreviewSkeleton";
+import CancelIcon from "@material-ui/icons/Cancel";
 
-function PostPreview({ post }) {
+function PostPreview({ post, onCloseClick }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -23,7 +24,12 @@ function PostPreview({ post }) {
     const bannerSource = `https://picsum.photos/id/${post.id}/400/200`;
     return (
       <div className="postPreview__content">
-        <h4 className="postPreview__title">{post.title}</h4>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <h4 className="postPreview__title">{post.title}</h4>
+          <span className="postPreview__close" onClick={onCloseClick}>
+            <CancelIcon />
+          </span>
+        </div>
         <div className="postPreview__banner">
           <img src={bannerSource} alt={post.title} />
         </div>

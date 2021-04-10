@@ -1,10 +1,11 @@
 .postPreview {
-  flex: 0.33;
+  flex: 0.5;
+  margin-left: 10px;
   background-color: white;
-  overflow: hidden;
   box-shadow: 2px 2px 2px rgb(0 0 255 / 20%);
   border-radius: 5px;
   height: 85vh;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .postPreview__content {
@@ -15,10 +16,23 @@
   text-transform: uppercase;
   padding-bottom: 2%;
   border-bottom: 1px solid whitesmoke;
+  flex: 1;
+}
+
+.postPreview__close {
+  font-weight: bold;
+  margin-top: -25px;
+  margin-right: -25px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.postPreview__close > .MuiSvgIcon-root:hover {
+  transform: scale(1.1);
 }
 
 .postPreview__body {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .postPreview__banner {

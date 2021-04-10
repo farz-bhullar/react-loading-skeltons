@@ -1,7 +1,8 @@
 .posts {
-  flex: 0.65;
+  flex: 1;
   overflow-y: scroll;
   height: 85vh;
+  padding: 5px;
 }
 
 .posts::-webkit-scrollbar {

@@ -23,6 +23,7 @@ function Posts({ onPostClick }) {
     posts.map((post) => {
       return (
         <div
+          key={`post-key-${post.id}`}
           className={`posts__post ${
             post.id === activePostId ? "posts_post--active" : ""
           }`}
@@ -40,10 +41,10 @@ function Posts({ onPostClick }) {
   const renderPostsSkeleton = () =>
     Array(5)
       .fill()
-      .map(() => {
+      .map((_, index) => {
         return (
-          <div className="posts__post">
-            <PostSkeleton />
+          <div className="posts__post posts_post-loading" key={`ps-k-${index}`}>
+            <PostSkeleton key={`post-skeleton-key-${index}`} />
           </div>
         );
       });
