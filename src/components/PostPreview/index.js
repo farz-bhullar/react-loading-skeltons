@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
 import PostPreviewSkeleton from "../Skeleton/PostPreviewSkeleton";
-import { getCurrentTimestamp } from "../../utils";
 
 function PostPreview({ post }) {
   const [loading, setLoading] = useState(true);
@@ -26,7 +25,7 @@ function PostPreview({ post }) {
       <div className="postPreview__content">
         <h2 className="postPreview__title">{post.title}</h2>
         <div className="postPreview__banner">
-          <img src={bannerSource} />
+          <img src={bannerSource} alt={post.title} />
         </div>
         <p className="postPreview__body">{post.body}</p>
       </div>

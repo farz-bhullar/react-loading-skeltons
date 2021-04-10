@@ -4,21 +4,33 @@ import "./index.css";
 import { truncate } from "../../utils";
 function Posts({ onPostClick }) {
   const [posts, setPosts] = useState([]);
+  const [activePostId, setActivePostId] = useState(0);
 
-  useEffect(async () => {
-    var response = await fetch("https://jsonplaceholder.typicode.com/posts");
-    var data = await response.json();
+  useEffect(() => {
+    const fetchData = async () => {
+      var response = await fetch("https://jsonplaceholder.typicode.com/posts");
+      var data = await response.json();
 
-    setTimeout(() => {
-      setPosts(data);
-      onPostClick(data[0]);
-    }, 5000);
+      setTimeout(() => {
+        setPosts(data);
+      }, 5000);
+    };
+
+    fetchData();
   }, []);
 
   const renderPosts = () =>
     posts.map((post) => {
       return (
-        <div className="posts__post" onClick={() => onPostClick(post)}>
+        <div
+          className={`posts__post ${
+            post.id === activePostId ? "posts_post--active" : ""
+          }`}
+          onClick={() => {
+            setActivePostId(post.id);
+            onPostClick(post);
+          }}
+        >
           <h5 className="posts__title">{post.title}</h5>
           <p className="posts__body">{truncate(post.body, 95)}</p>
         </div>

@@ -22,6 +22,10 @@
   box-shadow: 2px 2px 2px rgb(0 0 255 / 20%);
 }
 
+.posts_post--active {
+  background-color: #eee7e78c;
+}
+
 .posts__title {
   text-transform: uppercase;
   margin-bottom: 10px;
