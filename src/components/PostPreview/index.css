@@ -4,6 +4,7 @@
   overflow: hidden;
   box-shadow: 2px 2px 2px rgb(0 0 255 / 20%);
   border-radius: 5px;
+  height: 85vh;
 }
 
 .postPreview__content {
