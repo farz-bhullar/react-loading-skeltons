@@ -20,10 +20,10 @@ function PostPreview({ post }) {
     );
   };
   const renderPostPreview = () => {
-    const bannerSource = `https://picsum.photos/id/${post.id}/500/300`;
+    const bannerSource = `https://picsum.photos/id/${post.id}/400/200`;
     return (
       <div className="postPreview__content">
-        <h2 className="postPreview__title">{post.title}</h2>
+        <h4 className="postPreview__title">{post.title}</h4>
         <div className="postPreview__banner">
           <img src={bannerSource} alt={post.title} />
         </div>

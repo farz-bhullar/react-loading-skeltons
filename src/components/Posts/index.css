@@ -17,7 +17,7 @@
   margin-bottom: 10px;
   border-radius: 5px;
   background-color: white;
-  padding: 50px;
+  padding: 35px;
   cursor: pointer;
   box-shadow: 2px 2px 2px rgb(0 0 255 / 20%);
 }
@@ -29,12 +29,12 @@
 .posts__title {
   text-transform: uppercase;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .posts__body {
   color: grey;
-  font-size: 20px;
+  font-size: 13px;
 }
 
 .posts__post--loading {
